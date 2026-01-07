@@ -8,8 +8,22 @@ namespace Calculadora
 {
     internal class Program
     {
+        enum Menu {Adicao = 1, Subtracao, Mutiplicacao, Divisao, Potencia, Raiz, Sair }
         static void Main(string[] args)
         {
+            Console.WriteLine("Seja bem vindo ao CALC, selecione um das opçoes: ");
+            Console.WriteLine("1 - Adicao\n2 - Subtracao\n3 - Mutiplicacao\n4 - Divisao\n" +
+                              "5 - Potencia\n6 -  Raiz\n7 - Sair");
+
+            // para fins didaticos oque esta acontecendo aqui 
+            //nos estamos recebendo o valor que vai ser escrito no console que vem em string
+            //vaos converter para int que vai buscar em menu e atribuir a opção que virou uma variavel.
+            Menu opcao = (Menu)Convert.ToInt32(Console.ReadLine());
+            
+
+
+            Console.ReadKey();
         }
+
     }
 }
